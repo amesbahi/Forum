@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_filter :authenticate_user!
   before_action :find_post, only: [:show, :edit, :update, :destroy]
 
   def index
